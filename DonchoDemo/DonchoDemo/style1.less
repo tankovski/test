@@ -1,0 +1,203 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.linear(@from, @to) {
+    background: @from; /* Old browsers */
+    background: -moz-linear-gradient(top, @from 0%, @to 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@from), color-stop(100%,@to)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @from 0%,@to 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @from 0%,@to 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @from 0%,@to 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @from 0%,@to 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 ); /* IE6-9 */
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        height: 0;
+        content: "";
+		clear:both;
+    }
+}
+body {
+    @bbackground: #89ffb0;
+    @default-color: #123456;
+    @nav-font-family: 'Monotype Corsiva', 'Apple Chancery', 'ITC Zapf Chancery', 'URW Chancery L', cursive;
+    @header-color1: #0e720e;
+    @header-color2: #79ec9b;
+    @default-font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+
+    #wrapper {
+        background-color: @bbackground;
+        color: @default-color;
+        font-family: @default-font-family;
+
+        &>header {
+
+            padding-top: 25px;
+            padding-left: 25px;
+            .linear(@header-color1,@bbackground);
+            margin-bottom: 50px;
+			
+
+            h1 {
+                color: #cbefdb;
+                font-size: 2.4em;
+            }
+
+            nav {
+                font-family: @nav-font-family;
+
+                ul {
+                    padding-left: 9px;
+                    list-style: none;
+                    .clearfix();
+
+                    li {
+                        padding-left: 11px;
+                        padding-right: 5px;
+                        padding-bottom: 10px;
+                        padding-top: 5px;
+                        float: left;
+                        border-right: 1px solid black;
+                        height: 29px;
+
+                        &:last-of-type {
+                            border-right: none;
+                        }
+
+                        a {
+                            color: @default-color;
+                            font-size: 1.7em;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        aside {
+            padding: 5px;
+            text-align: center;
+            height: 165px;
+            width: 150px;
+            border-radius: 15px;
+            border: 1px solid black;
+            .linear(@bbackground, white);
+
+            h2 {
+                font-size: 1.55em;
+            }
+
+            ul {
+                padding: 10px;
+                padding-left: 15px;
+
+                li {
+                    margin-bottom: 5px;
+                    //padding:3px;
+                    font-size: 0.9em;
+                    text-align: left;
+                    color: @default-color;
+
+                    a {
+                        color: @default-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &.right {
+                margin-left: 35px;
+                float: right;
+                margin-right: 35px;
+                padding-bottom: 0px;
+                height: 159px;
+
+                ul {
+                    margin-left: 18px;
+                }
+            }
+
+            &.left {
+                float: left;
+                margin-left: 35px;
+                margin-right: 35px;
+            }
+        }
+
+
+
+        section {
+            font-size: 0.9em;
+            margin: 35px;
+
+            article {
+                header {
+                    h1 {
+                        font-size: 1.7em;
+                    }
+                }
+
+                div {
+                    p {
+                        text-indent: 1.95em;
+
+                        strong {
+                            color: #1b4d80;
+                        }
+
+                        em {
+                            color: #1f5a95;
+                        }
+                    }
+
+                    ul {
+                        list-style-type: none;
+
+                        li {
+                            padding-left: 5px;
+                            margin-top: 10px;
+
+                            &:nth-child(3) {
+                                margin-top: 9px;
+                            }
+
+                            h2 {
+                                margin-left: 20px;
+                                font-size: 1.25em;
+                            }
+
+                            p {
+
+                                a {
+                                    text-decoration: none;
+                                    color: #2467aa;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            text-align: center;
+			padding-top:16px;
+			padding-bottom:17px;
+
+
+            h2 {
+				font-size:1.25em;
+            }
+        }
+    }
+}

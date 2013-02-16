@@ -1,0 +1,5 @@
+D:\Uroci\CSS\EXAM\DonchoDemo\DonchoDemo\bin\DonchoDemo.dll
+D:\Uroci\CSS\EXAM\DonchoDemo\DonchoDemo\bin\DonchoDemo.pdb
+D:\Uroci\CSS\EXAM\DonchoDemo\DonchoDemo\obj\Debug\DonchoDemo.csprojResolveAssemblyReference.cache
+D:\Uroci\CSS\EXAM\DonchoDemo\DonchoDemo\obj\Debug\DonchoDemo.dll
+D:\Uroci\CSS\EXAM\DonchoDemo\DonchoDemo\obj\Debug\DonchoDemo.pdb
